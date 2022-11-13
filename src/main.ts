@@ -30,8 +30,8 @@ async function bootstrap() {
     customSiteTitle: 'Go Api Docs',
   });
 
-  await app.listen(envVariables.port);
+  await app.listen(envVariables.Port);
 
-  logger.log(`Server Listening on Port : ${envVariables.port}`);
+  logger.log(`Server Listening on Port : ${envVariables.Port}`);
 }
 bootstrap();

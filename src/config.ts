@@ -6,7 +6,15 @@ import { Config } from './common/constants/config';
 export class Environment {
   @IsNotEmpty()
   @Expose({ name: 'PORT' })
-  port: string;
+  Port: string;
+
+  @IsNotEmpty()
+  @Expose({ name: 'MONGODB_URI' })
+  MongoDbUri: string;
+
+  @IsNotEmpty()
+  @Expose({ name: 'MONGODB_NAME' })
+  MongoDbName: string;
 }
 
 export const registerConfig = registerAs(Config, (): Environment => {
